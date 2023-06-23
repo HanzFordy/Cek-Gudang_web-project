@@ -95,12 +95,6 @@
                         </select>
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="stok" class="col-sm-2 col-form-label">Stok</label>
-                        <div class="col-sm-1">
-                        <input type="text" class="form-control" name="stok" id="stok" required>
-                        </div>
-                    </div>
                     <div class="form-group text-right d-flex justify-content-end m-lg-5">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Tambah</button>
                     </div>

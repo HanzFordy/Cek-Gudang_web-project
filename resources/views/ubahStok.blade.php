@@ -76,7 +76,7 @@
                 Update
             </div>
             <div class="card-body">
-                <form action="{{route('updateBarang')}}" method="post">
+                <form action="{{route('updateStok')}}" method="post">
                     @csrf
                     <div class="mb-3 row">
                         <label for="Id barang" class="col-sm-2 col-form-label">Id</label>
@@ -87,28 +87,28 @@
                     <div class="mb-3 row">
                         <label for="Nama Barang" name="id" class="col-sm-2 col-form-label">Nama Barang</label>
                         <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" name="nama_barang" id="Nama Barang" value="{{$data->nama_barang}}" required>
+                        <input type="text" readonly class="form-control-plaintext" name="namaBarang" id="Nama Barang" value="{{$data->namaBarang}}" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="Tipe barang" class="col-sm-2 col-form-label">Tipe Barang</label>
+                        <label for="supplier" class="col-sm-2 col-form-label">Id Barang</label>
                         <div class="col-sm-10">
-                        <input type="text" readonly class="form-control-plaintext" name="tipe_barang" id="Tipe barang" value="{{$data->tipe_barang}}" required>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="supplier" class="col-sm-2 col-form-label">Supplier</label>
-                        <div class="col-sm-10">
-                        <select name="id_supplier" id="">
-                        @foreach($supplier as $s)
+                        <select name="id_barang" id="">
+                        @foreach($barang as $s)
                         <option value="{{$s->id}}"
-                        @if($s->id == $data->id_supplier)
+                        @if($s->id == $data->id_barang)
                         selected
                         @endif
-                        >{{$s->nama}}
+                        >{{$s->nama_barang}}
                         </option>
                         @endforeach
                         </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="stok" class="col-sm-2 col-form-label">Stok</label>
+                        <div class="col-sm-1">
+                        <input type="text" class="form-control" name="stok" value="{{$data->stok}}" id="stok" required>
                         </div>
                     </div>
                     <div class="form-group text-right d-flex justify-content-end m-lg-5">

@@ -24,7 +24,6 @@ class BarangController extends Controller
                 'nama_barang'=> $request->input('nama_barang'),
                 'tipe_barang'=> $request->input('tipe_barang'),
                 'id_supplier' =>$request->input('id_supplier'),
-                'stok'=>$request->input('stok')
             ]);
             return redirect()->route('dashboard');
         }
@@ -40,7 +39,6 @@ class BarangController extends Controller
                 'nama_barang'=>$request->input('nama_barang'),
                 'tipe_barang'=>$request->input('tipe_barang'),
                 'id_supplier'=>$request->input('id_supplier'),
-                'stok'=>$request->input('stok')
             ]);
             return redirect()->route('dashboard');
         }

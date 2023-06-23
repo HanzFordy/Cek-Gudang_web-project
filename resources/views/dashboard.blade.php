@@ -110,8 +110,7 @@
                             <th style="text-align: center;">Id Barang</th>
                             <th style="text-align: center;">Nama Barang</th>
                             <th style="text-align: center;">Tipe Barang</th>
-                            <th style="text-align: center;">Id Supplier</th>
-                            <th style="text-align: center;">Stok</th>
+                            <th style="text-align: center;">Id Supplier</th>    
                             <th style="text-align: center;">Aksi</th>
                         </tr>
                         <a class="btn btn-success d-flex justify-content-center" href="{{  route('tambahBarang')  }}"><i class="fa fa-plus"></i> Tambah Barang</a>
@@ -123,16 +122,49 @@
             <td style="text-align: center;">{{ $barang->nama_barang }}</td>
             <td style="text-align: center;">{{ $barang->tipe_barang }}</td>
             <td style="text-align: center;">{{ $barang->id_supplier }}</td>
-            <td style="text-align: center;">{{ $barang->stok }}</td>
             <td style="text-align: center;"><a href="/ubahBarang/{{$barang->id}}" class="btn btn-warning btn-sm"><i
                         class="fa fa-pencil"></i>update</a>
                 <a href="/hapusBarang/{{$barang->id}}" class="btn btn-danger btn-sm"
                     onclick="return confirm('Anda yakin ingin hapus?');"><i class="fa fa-pencil"></i>delete</a>
             </td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
+            </tr>
+            @endforeach
+            </tbody>
+        </table>
+            </div>
+        </div>
+        <div class="card border-dark m-lg-5">
+            <div class="card-header">
+                Stok
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <a class="btn btn-success d-flex justify-content-center" href="{{  route('tambahStok')  }}"><i class="fa fa-plus"></i> Tambah Stok</a>
+                        <tr>
+                            <th style="text-align: center;">Id</th>
+                            <th style="text-align: center;">Nama Barang</th>
+                            <th style="text-align: center;">Id Barang</th>
+                            <th style="text-align: center;">Stok</th>
+                            <th style="text-align: center;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($stok as $stok)
+                        <tr>
+                            <td style="text-align:center">{{ $stok->id }}</td>
+                            <td style="text-align: center;">{{ $stok->namaBarang }}</td>
+                            <td style="text-align: center;">{{ $stok->id_barang }}</td>
+                            <td style="text-align: center;">{{ $stok->stok }}</td>
+                            <td style="text-align: center;"><a href="/ubahStok/{{$stok->id}}" class="btn btn-warning btn-sm"><i
+                                        class="fa fa-pencil"></i>update</a>
+                                <a href="/hapusStok/{{$stok->id}}" class="btn btn-danger btn-sm"
+                                    onclick="return confirm('Anda yakin ingin hapus?');"><i class="fa fa-pencil"></i>delete</a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>

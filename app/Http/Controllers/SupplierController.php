@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\StokBarang;
 use Illuminate\Http\Request;
 use App\Models\Supplier;
 use App\Models\Barang;
@@ -13,7 +14,8 @@ class SupplierController extends Controller
     {    
         $supplier = Supplier::all();
         $barang = Barang::all();
-        return view('dashboard', ['supplier' => $supplier, 'barang' => $barang]);
+        $stok = StokBarang::all();
+        return view('dashboard', ['supplier' => $supplier, 'barang' => $barang, 'stok' => $stok]);
     }
     public function tambah(){
         return view('tambahsupplier');

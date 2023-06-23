@@ -42,3 +42,9 @@ Route::post('/simpanBarang', [App\Http\Controllers\BarangController::class, 'sim
 Route::get('/ubahBarang/{id}', [App\Http\Controllers\BarangController::class, 'ubahBarang'])->name('ubahBarang')->middleware('auth');
 Route::post('/update', [App\Http\Controllers\BarangController::class, 'updateBarang'])->name('updateBarang')->middleware('auth');
 Route::get('/hapusBarang/{id}', [App\Http\Controllers\BarangController::class, 'hapusBarang'])->name('hapusBarang')->middleware('auth');
+//Stok
+Route::get('/tambahStok', [App\Http\Controllers\StokBarangController::class, 'tambahStok'])->name('tambahStok')->middleware('auth');
+Route::post('/simpanStok', [App\Http\Controllers\StokBarangController::class, 'simpan'])->name('simpanStok')->middleware('auth');
+Route::get('/ubahStok/{id}', [App\Http\Controllers\StokBarangController::class, 'ubahStok'])->name('ubahStok')->middleware('auth');
+Route::post('/updateStok', [App\Http\Controllers\StokBarangController::class, 'updateStok'])->name('updateStok')->middleware('auth');
+Route::get('/hapusStok/{id}', [App\Http\Controllers\StokBarangController::class, 'hapusStok'])->name('hapusStok')->middleware('auth');
