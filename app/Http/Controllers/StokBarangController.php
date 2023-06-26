@@ -11,8 +11,12 @@ class StokBarangController extends Controller
     //
     public function index()
     {
-        $data = StokBarang::all();
-        return view('dashboard')->with('data', $data);
+        $stok = StokBarang::all();
+        $sum = 0;
+        foreach ($stok as $item) {
+            $sum += $item->stok;
+        }
+        return view('stok', ['stok' => $stok, 'sum' => $sum]);
     }
         public function tambahStok(){
             $barang = Barang::select('id','nama_barang')->get();
@@ -25,7 +29,7 @@ class StokBarangController extends Controller
                 'id_barang' =>$request->input('id_barang'),
                 'stok'=>$request->input('stok')
             ]);
-            return redirect()->route('dashboard');
+            return redirect()->route('stok');
         }
         public function ubahStok($id){
             $data = StokBarang::where('id',$id)
@@ -40,13 +44,13 @@ class StokBarangController extends Controller
                 'id_barang'=>$request->input('id_barang'),
                 'stok'=>$request->input('stok')
             ]);
-            return redirect()->route('dashboard');
+            return redirect()->route('stok');
         }
     
         public function hapusStok($id){
             $data = StokBarang::where('id', $id)
             ->delete();
     
-            return redirect('dashboard');
+            return redirect('stok');
         }
 }

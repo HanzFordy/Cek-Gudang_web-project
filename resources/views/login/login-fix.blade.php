@@ -64,7 +64,8 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
         <!-- Image Logo -->
-        <b><a class="navbar-brand" href="#" style="font-family: sans-serif; color: black;">Cek<b style="color: white">GUDANG</b></a></b>
+        
+        <a href="{{route('index')}}"><img src="images/logo2.png" style="width: 100px; height: 65px" alt="logo"></a>
 
         <!-- Mobile Menu Toggle Button -->
         <button

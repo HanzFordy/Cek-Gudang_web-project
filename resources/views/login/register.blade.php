@@ -67,9 +67,7 @@
                 <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
                 <!-- Image Logo -->
-                <a class="navbar-brand logo-image" href="index.html"
-                    ><img src="images/logo.svg" alt="alternative"
-                /></a>
+                <a href="{{route('index')}}"><img src="images/logo2.png" style="width: 100px; height: 65px" alt="logo"></a>
 
                 <!-- Mobile Menu Toggle Button -->
                 <button

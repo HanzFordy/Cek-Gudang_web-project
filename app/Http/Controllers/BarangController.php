@@ -11,8 +11,9 @@ class BarangController extends Controller
     //
     public function index()
     {
-        $data = Barang::all();
-        return view('dashboard')->with('data', $data);
+        $barang = Barang::all();
+        $banyakBarang = Barang::count();
+        return view('barang', ['barang' => $barang, 'banyakBarang' => $banyakBarang]);
     }
         public function tambahBarang(){
             $supplier = Supplier::select('id','nama')->get();
@@ -25,7 +26,7 @@ class BarangController extends Controller
                 'tipe_barang'=> $request->input('tipe_barang'),
                 'id_supplier' =>$request->input('id_supplier'),
             ]);
-            return redirect()->route('dashboard');
+            return redirect()->route('barang');
         }
         public function ubahBarang($id){
             $data = Barang::where('id',$id)
@@ -40,13 +41,13 @@ class BarangController extends Controller
                 'tipe_barang'=>$request->input('tipe_barang'),
                 'id_supplier'=>$request->input('id_supplier'),
             ]);
-            return redirect()->route('dashboard');
+            return redirect()->route('barang');
         }
     
         public function hapusBarang($id){
             $data = Barang::where('id', $id)
             ->delete();
     
-            return redirect('dashboard');
+            return redirect('barang');
         }
 }

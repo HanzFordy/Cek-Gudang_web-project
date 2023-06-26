@@ -52,7 +52,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="#"><b style="color: black; text-decoration:none;">Cek<b style="color: white">GUDANG</b></b></a> 
+            <a class="navbar-brand logo-image" href="#"><img src="images/logo2.png" style="width: 100px; height: 65px" alt="logo"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">

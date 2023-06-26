@@ -28,8 +28,12 @@ Route::get('/register', [RegisterController::class, 'registrasi'])->name('regist
 Route::post('/actionRegistrasi', [RegisterController::class, 'actionRegistrasi'])->name('actionRegistrasi');
 
 
+Route::get('/dashboard', [App\Http\Controllers\SupplierController::class, 'tampilHitung'])->name('dashboard')->middleware('auth');
+Route::get('/supplier', [App\Http\Controllers\SupplierController::class, 'index'])->name('supplier')->middleware('auth');
+Route::get('/barang', [App\Http\Controllers\BarangController::class, 'index'])->name('barang')->middleware('auth');
+Route::get('/stok', [App\Http\Controllers\StokBarangController::class, 'index'])->name('stok')->middleware('auth');
+
 //Supplier
-Route::get('/dashboard', [App\Http\Controllers\SupplierController::class, 'index'])->name('dashboard')->middleware('auth');
 Route::get('/tambahsupplier', [App\Http\Controllers\SupplierController::class, 'tambah'])->name('tambahsupplier')->middleware('auth');
 Route::post('/simpansupplier', [App\Http\Controllers\SupplierController::class, 'simpan'])->name('simpansupplier')->middleware('auth');
 Route::get('/ubahsupplier/{id}', [App\Http\Controllers\SupplierController::class, 'ubah'])->name('ubahsupplier')->middleware('auth');
