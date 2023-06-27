@@ -1,4 +1,4 @@
-<p align="center"><a href="#" target="_blank"><img src="images/logo2.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="#" target="_blank">![logo2](https://github.com/makmalt/project-web/assets/94909299/e3865260-70d0-4af8-988f-df4ec8017b54)</a></p>
 
 
 ## Tentang Cek Gudang
@@ -11,3 +11,4 @@ Website Cek Gudang adalah website berbasis CRUD untuk memanage barang yang ada d
 Berikut adalah beberapa cuplikan page kami
 <p><img src="images/dashboard.png" width="400" alt="Laravel Logo"></p>
 <p><img src="images/Supplier.png" width="400" alt="Laravel Logo"></p>
+
