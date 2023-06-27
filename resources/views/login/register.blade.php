@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input
-                                        type="text"
+                                        type="password"
                                         class="form-control-input"
                                         name="password"
                                         id="spassword"
