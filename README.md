@@ -14,3 +14,4 @@ Berikut adalah beberapa cuplikan page kami
 ![Supplier](https://github.com/makmalt/project-web/assets/94909299/c083c81f-87eb-4026-b65c-8d32341cd253)
 
 NB: Website ini merupakan sebuah case-study project dan belum ditargetkan untuk penggunaan secara komersil.
+
